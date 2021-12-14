@@ -1,0 +1,74 @@
+<?php
+   include_once '_project code/connect.php'
+   ?>
+<html>
+    <head>
+        <title>Mulika</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale 0.1">
+    </head>
+    <body>
+        <div class="nav2-container">
+        <div class="navbar">
+            <img src="bgt.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+        <div class="login-container">
+
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                <h3>LOGIN</h3>
+                <form name="myform" action="connect.php" method="POST">
+                    <input type="text" name="name" class="input-box" placeholder="enter your name"required>
+                    <input type="password" name="password" class="input-box" placeholder="password" required>
+                    <button type="submit"class="submit-btn reg-btn">Submit</button>
+                    <input type="checkbox"><span>Remember me</span>
+                </form>
+                <button type="button" class="reg-btn reg1-btn" onclick="openRegister()">Register Here</button>
+                <a href="">Forgot Password</a>
+            </div>
+
+                <div class="card-back">
+                    <h3>REGISTER</h3>
+                <form name="myform" action="connect.php" method="POST">
+                    <input type="text" name="name" class="input-box" placeholder="Your name"required>
+                    <input type="text" name="id" class="input-box" placeholder="ID Number"required>
+                    <input type="text" name="residence" class="input-box" placeholder="Residence(county and constituency)"required>
+                    <input type="email" name="email" class="input-box" placeholder="enter your email"required>
+                    <input type="text" name="number" class="input-box" placeholder="PhoneNumber"required>
+                    <input type="password" name="password" class="input-box" placeholder="password" required>
+                    <button type="submit" name="register" class="submit-btn reg-btn">Submit</button>
+                    
+                </form>
+                <button type="button" class="reg-btn reg1-btn" onclick="openLogin()">I Have an Account</button>
+                
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var card =document.getElementById("card");
+function openRegister(){
+    card.style.transform = "rotateY(-180deg)"
+}
+function openLogin(){
+    card.style.transform = "rotateY(0deg)"
+}
+    </script>
+
+    </body>
+</html>
